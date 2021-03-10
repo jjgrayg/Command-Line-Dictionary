@@ -40,14 +40,14 @@ def printDef(deflist):
     print('\n')
 
 # Create a loop to run the program until the user types 0
-def start():
-    userInput = 'rand'                                                              # Initialize the userInput var so the while loop can be executed
-    while userInput != '0':
+def start():                                                            # Initialize the userInput var so the while loop can be executed
+    while True:
         userInput = input('Enter a word you would like the definition of (Type 0 to exit): ')
         if userInput != '0':                                                        # If the user enters anything other than 0 run the program
             printDef(returnDef(userInput))
         elif userInput == '0':                                                      # If 0 is entered exit
             print("Exiting...")
+            break
 
 # Start the program
 start()
